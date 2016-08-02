@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="84466d44-92ca-4b62-aae8-23f53473d0e6" name="MAMP Debug" url="http://localhost">
+        <fileTransfer mountedRoot="$PROJECT_DIR$/../.." accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,203 @@
+/* global styles */
+html, body {
+    background: url('../img/crossword.png') repeat fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+h1, h2, h3, h4, p, a {
+	font-weight:300;
+}
+
+h2 a:hover {
+	text-decoration:none;
+	font-weight:normal;
+}
+
+/* navigation styles */
+.navbar.navbar-default {
+    border-bottom: 1px solid #655454;
+}
+
+/* posts styles */ 
+.post textarea {
+	display:none;
+}
+
+.post {
+	height: 525px;
+}
+
+.center-button {
+	text-align:center;
+	margin-top:30px;
+	width:100%;
+}
+.note-style {
+	 margin-bottom: 15px;
+}
+.posts li {
+	list-style-type: none;
+}
+
+.input-error {
+	border: 1px solid #a94442;
+}
+
+.note-editable {
+	border: 1px solid #ccc;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;}
+
+.note-editable:focus {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+
+}
+
+.post-date {
+	color: #666;
+	font-weight: 300;
+}
+
+.post-date {
+	color: #666;
+	font-weight: 300;
+}
+
+.panel-heading {
+	font-weight: 300;
+}
+
+/* home page styles */
+.profile-img {
+    border: 1px solid #e7e7e7;    
+    border-radius: 50%;
+    margin: 3em 8em;
+}
+
+.welcome p:nth-of-type(1) {
+    font-size: 3.4em;
+    margin-top: 1.5em;
+}
+
+
+.welcome p:nth-of-type(2) {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.profile {
+    margin-top: 5em;
+}
+
+.about {
+    margin-top:5em;
+}
+
+.about p, .work p {
+    line-height: 1.65;
+    font-size: 1.15em;
+}
+
+.work, .blog {
+    margin-top: 8em
+}
+
+.posts-feed {
+    list-style-type: none;
+    margin: 0 0 3em 0;
+    padding: 0;
+}
+.comment header {
+	font-weight:300;
+}
+
+.comment p {
+	margin-bottom:0;
+}
+
+.glyphicon-ok {
+	color:#5cb85c;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.login-link a {
+	color: #f8f8f8 !important;
+}
+
+/* DataTable styles */
+
+#postsTable_filter, #commentsTable_filter {
+	display: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0 !important;
+}
+
+#commentsTable {
+	width: 85%;
+}
+
+.black {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+/* Small */
+@media (max-width: 992px) { 
+    
+    .profile-img {
+        border: 1px solid #e7e7e7;    
+        border-radius: 50%;
+        margin: 3em auto;
+        display: block;
+    }
+
+    .welcome p:nth-of-type(1) {
+        margin-top: 0;
+        text-align: center;
+    }
+
+
+    .welcome p:nth-of-type(2) {
+        margin-top: 0;
+        text-align: center;        
+    } 
+}
+
+/* Extra Small */
+@media (max-width: 768px) { 
+    .profile-img {
+        width: 215px;
+        margin: 1.5em auto;
+        display: block;
+    }
+
+    .welcome p:nth-of-type(1) {
+        margin-top: 0;
+        text-align: center;
+        font-size: 2em        
+    }
+
+
+    .welcome p:nth-of-type(2) {
+        margin-top: 0;
+        text-align: center;   
+        font-size: 1.25em             
+    } 
+}
