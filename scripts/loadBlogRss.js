@@ -17,14 +17,11 @@ function loadBlogRss() {
             "<ul class=\"posts-feed\">"
         ];        
         for (var i = 0, item; item = items[i++];) {
-            var post = {};
-            post.title = item.match(titleRegex)[1];
-            post.link = item.match(linkRegex)[1];
             // match title and link to template 
             blogHtml.push(
                 postTemplate.join("")
-                .replace("{title}", post.title)
-                .replace("{link}", post.link)
+                .replace("{title}", item.match(titleRegex)[1])
+                .replace("{link}", item.match(linkRegex)[1])
             );
         }
         blogHtml.push("</ul>");
@@ -43,7 +40,7 @@ function loadBlogRss() {
                 if (i > 0) {
                     items.push(item.innerHTML.replace(/[\n\r]/g, ''));
                 }
-                if (i == 6) {
+                if (i == 5) {
                     break;
                 }
             }
