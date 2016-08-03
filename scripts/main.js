@@ -2,34 +2,19 @@
  * Created by addison on 7/31/16.
  */
 "use strict";
-//load default.js 
-var scriptsLoaded = false;
-function getScript(script) {
-    $.getScript( script, function(data, textStatus, jqxhr) {
-        if (jqxhr.status === 200 && textStatus.toLowerCase() === "success") {
-            logger.logSuccess(script + "has been loaded"); // use logger to help debugging (can view VM from console)
-            scriptsLoaded = true;
-            return;  
-        } else {
-            console.log("%cError: failed to load" + script, "color:red");
-            return;
-        }
-    });
-}
-
-getScript("scripts/default.js");
-getScript("scripts/loadBlogRss.js");
 
 // attach click events and listeners 
 $(function() {
-    if (scriptsLoaded) { // only attach event if default.js loaded
-        $("#sendForm").click(function(e) {
-            e.preventDefault();
-            contactForm.send();
-            return;
-        });
-        loadBlogRss();
-    }
+    $("#contactForm").hide();
+    $("#sendForm").click(function(e) {
+        e.preventDefault();
+        contactForm.send();
+        return;
+    });
+    $("[href='#contact']").click(function(){
+        $("#contactForm").toggle();
+    })
+    loadBlogRss();
 });
 
 // object to hold fields and functions for the contact form 

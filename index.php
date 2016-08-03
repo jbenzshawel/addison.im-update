@@ -9,9 +9,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <title>addison.im - Addison Benzshawel</title>
+
     <!-- styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" type="text/css" />
 </head>
 <body>
@@ -33,7 +35,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
-                    <li><a href="http://addison.im/blog/public/posts">Blog</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul> <!-- /.nav.navbar-nav.navbar-right -->
             </div> <!-- /.collapse.navbar-collapse -->
@@ -65,24 +67,40 @@
                     <p>I currently work as a software developer in addition to freelancing and working on side projects. I have experience with responsive web design and building web applications using C#.NET and LAMP / Laravel.</p>
                 </div> <!-- /.col-sm-12.col-md-7 -->
                 <div class="col-sm-12 col-md-6">
-                    <h3>Something Else</h3>
-                    <p>Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde Lorum ipsum malde</p>
+                    <h3>Industrial Engineering</h3>
+                    <p>I have a degree in Industrial Engineering and have experience working in manufacturing, information systems, and human factors. Most of my recent work experience has been in the IT field.
+                        For more information about my work experience and education check out my résumé.</p>
                 </div> <!-- /.col-sm-12.col-md-7 -->
             </div> <!-- /.col-sm-12.col-md-10.col-md-offset-1.work -->
         </div> <!-- /.row -->
         <div class="row">
             <div class="col-sm-12 col-md-10 col-md-offset-1 blog">
+                <a id="blog"></a>
                 <h1>Blog</h1>
                 <div id="posts">
                     <!-- posts loaded here -->
-                </div>
-            </div>
-        </div>
+                </div> <!-- /#posts -->
+                <div class="morePosts">
+                    <a href="//addison.im/blog/public/posts" >All Posts</a>                
+                </div> <!-- /.morePosts -->
+            </div> <!-- /.col-sm-12.col-md-10.col-md-offset-1.blog -->
+        </div> <!-- /.row -->
     </div> <!-- /.container-fluid -->
 
       <footer>
         <div class="row">
+            <div class="social col-sm-12" id="contact">
+                <ul>
+                    <li><a href="https://github.com/jbenzshawel" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                    <li><a href="http://www.linkedin.com/pub/john-addison-benzshawel/75/774/356" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                    <li><a href="http://addison.im/blog/feed/" target="_blank"><i class="fa fa-rss fa-2x"></i></a></li>
+                    <li><a href="#contact"><i class="fa fa-envelope-o fa-2x" ></i></a></li>
+                </ul>
+            </div> <!-- /.social -->
+        </div> <!-- /.row -->
+        <div class="row">
             <div class="col-xs-8 col-xs-offset-2 contact">
+                <a id="contact">
                 <form id="contactForm">
                     <div id="statusMsg"></div>
                     <div class="form-group">
@@ -102,14 +120,15 @@
                     <div class="center-button">
                         <button class="btn btn-default" type="submit" id="sendForm">Submit</button>                    
                     </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
+                </form> <!-- / #contactForm -->
+            </div> <!-- /.col-xs-8.col-xs-offset-2.contact -->
+        </div> <!-- /.row -->
+    </footer>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="scripts/default.js" type="text/javascript"></script>
+    <script src="scripts/loadBlogRss.js" type="text/javascript"></script>
     <script src="scripts/main.js" type="text/javascript"></script>
 </body>
 </html>
