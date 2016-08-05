@@ -72,9 +72,11 @@ contactForm.send = function() {
         settings.success = function(data) {
             var data = JSON.parse(data);
             if (data.status == true) {
+                $("#form-content").hide();
                 _default.alertMsg("success", data.result, "#statusMsg");
             } else {
-                _default.alertMsg("error", "something went wrong trying to process your request. Please try again.", "#statusMsg");
+                logger.logError(data.exception);
+                _default.alertMsg("error", "Something went wrong trying to process your request. Please try again.", "#statusMsg");
             }
         }
         // send ajax request for contact form
