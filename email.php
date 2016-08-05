@@ -55,7 +55,7 @@ function send_contact_email($name, $email, $message){
         $emaiResult = $mailer->send($message);        
     } catch (Exception $ex) {
         $exception = true;
-        $errorMessage = 'Caught exception: ' +  $ex->getMessage();
+        $errorMessage = 'Caught exception: ' .  $ex->getMessage();
     }
     $arrayRtn = array("exception" => "");
     if($emailResult > 0 && !$exception){
