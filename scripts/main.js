@@ -72,6 +72,7 @@ contactForm.send = function() {
         settings.success = function(data) {
             var data = JSON.parse(data);
             if (data.status == true) {
+                $("#contactForm").css("margin", 0);
                 $("#form-content").hide();
                 _default.alertMsg("success", data.result, "#statusMsg");
             } else {
